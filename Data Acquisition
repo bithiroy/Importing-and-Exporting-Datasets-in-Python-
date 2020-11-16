@@ -1,51 +1,61 @@
-Import library	
+Import library:	
 	import pandas as pd
 
-Read data	
-  path = "https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/DA0101EN/auto.csv"
-  df = pd.read_csv(path, header=None)    	[for data without a header]
-Or,
-  df = pd.read_csv(path)			            [for data with a header]	
 
-Print the dataframe	
-  df    				  [for printing the entire dataframe]
+Read data:	
+  path = "https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/DA0101EN/auto.csv"
+  df = pd.read_csv(path, header=None)    	 [for data without a header]
+Or,
+  df = pd.read_csv(path)			 [for data with a header]	
+
+
+Print the dataframe:	
+  df    			[for printing the entire dataframe]
   df .head(n)			[for printing the first n rows of the dataframe]
   df .tail(n)			[for printing the bottom n rows of the dataframe]
 
-Add headers	
+
+Add headers:	
   headers = ["symboling","normalized-losses","make","fuel-type","aspiration", "num-of-doors","body-style","drive-wheels","engine-location",
             "wheel-base","length","width","height","curb-weight","engine-type","num-of-cylinders", "engine-size","fuel-system","bore","stroke",
             "compression-ratio","horsepower","peak-rpm","city-mpg","highway-mpg","price"]
   df.columns = headers
 
-Name of the columns of the dataframe	
+
+Name of the columns of the dataframe:	
   print(df.columns) 
 
-Get only numeric data	
+
+Get only numeric data:	
   df._get_numeric_data() 
  
-Save Dataset	
+ 
+Save Dataset:	
   df.to_csv("automobile.csv", index=False)
 Or,
   path = "C:\Windows\......\automobile.csv"
   df.to_csv(path) 
 
-Read Other Data Formats	
+
+Read Other Data Formats:	
   pd.read_csv()       [csv]
   pd.read_json()      [json]
   pd.read_excel()     [excel]
   pd.read_hdf()       [hdf]
   pd.read_sql()       [sql]
 
-Save Other Data Formats	
+
+Save Other Data Formats:	
   df.to_csv()        [csv]
   df.to_json()       [json]
   df.to_excel()      [excel]
   df.to_hdf()        [hdf]
   df.to_sql()        [sql]
  
-Check Data Types	
+ 
+Check Data Types:	
   df.dtypes 
 
-No of dimensions of a feature	
+
+No of dimensions of a feature:	
   df.shape 
